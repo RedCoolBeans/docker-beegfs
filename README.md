@@ -74,12 +74,14 @@ If you want to write to a BeeGFS cluster from within a Docker container you shou
 use the [docker-volume-beegfs](https://github.com/RedCoolBeans/docker-volume-beegfs)
 plugin instead. It exposes a Docker native volume to your containers.
 
-## Logging
-
-In order to change the default logging levels, the following environment
-variables can be used, along with their range:
+## Environment variables
 
 - `BEEGFS_LOGLEVEL`: 0 - 5 (default: 3)
+- metadata-specific:
+  - `METADATA_SERVICE_ID` default: 2
+- storage-specific:
+  - `STORAGE_SERVICE_ID` default: 3
+  - `STORAGE_TARGET_ID` default: 301
 
 ## Support
 
