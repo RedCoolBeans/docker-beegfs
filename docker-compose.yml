@@ -12,8 +12,6 @@ services:
     ports:
       - "8008:8008"
       - "8008:8008/udp"
-    environment:
-      BEEBGFS_LOGLEVEL: 3
   
   metadata:
     image: redcoolbeans/beegfs-metadata
@@ -25,7 +23,6 @@ services:
           - metadata
     environment:
       METADATA_SERVICE_ID: 2
-      BEEBGFS_LOGLEVEL: 3
     ports:
       - "8005:8005"
       - "8005:8005/udp"
@@ -43,7 +40,6 @@ services:
     environment:
       STORAGE_SERVICE_ID: 3
       STORAGE_TARGET_ID: 301
-      BEEBGFS_LOGLEVEL: 3
     ports:
       - "8003:8003"
       - "8003:8003/udp"
