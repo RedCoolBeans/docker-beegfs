@@ -1,0 +1,68 @@
+version: "2"
+
+services:
+  management:
+    build: mgmt
+    hostname: node01
+    networks:
+      beegfs:
+        aliases:
+          - node01
+          - management
+    ports:
+      - "8008:8008"
+      - "8008:8008/udp"
+    environment:
+      BEEBGFS_LOGLEVEL: 3
+  
+  metadata:
+    build: metadata
+    hostname: node02
+    networks:
+      beegfs:
+        aliases:
+          - node02
+          - metadata
+    environment:
+      METADATA_SERVICE_ID: 2
+      BEEBGFS_LOGLEVEL: 3
+    ports:
+      - "8005:8005"
+      - "8005:8005/udp"
+    depends_on:
+      - management
+  
+  storage:
+    build: storage
+    hostname: node03
+    networks:
+      beegfs:
+        aliases:
+          - node03
+          - storage
+    environment:
+      STORAGE_SERVICE_ID: 3
+      STORAGE_TARGET_ID: 301
+      BEEBGFS_LOGLEVEL: 3
+    ports:
+      - "8003:8003"
+      - "8003:8003/udp"
+    volumes:
+      - ~/beegfs_storage:/data
+    depends_on:
+      - management
+  
+#  client:
+#    build: client
+#    hostname: node04
+#    networks:
+#      beegfs:
+#        aliases:
+#          - node04
+#          - client
+#    # needed to prevent: mount: permission denied
+#    privileged: true
+
+networks:
+  beegfs:
+    driver: bridge
