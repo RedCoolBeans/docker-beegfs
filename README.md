@@ -8,16 +8,16 @@ First the `beegfs` kernel module needs to be loaded:
 
 	modprobe beegfs
 
-If it hasn't been built either copy `./beegfs.ko` into `/lib/modules/3.10.0-229.11.1.el7.x86_64/updates/fs/beegfs_autobuild/beegfs.ko`
-if the kernel version matches (built on CentOS 7.1.1503).
+If it hasn't been built either copy `./beegfs.ko` into `/lib/modules/3.10.0-327.18.2.el7.x86_64/updates/fs/beegfs_autobuild/beegfs.ko`
+if the kernel version matches (built on CentOS 7.2.1511).
 Otherwise install `beegfs-client`, then:
 
 	cd /opt/beegfs/src/client/beegfs_client_module_2015.03/build
 	make beegfs
 
-Path to kernel headers is incorrect; to fix it up:
+Path to kernel headers may be incorrect; to fix it up:
 
-	ln -s 3.10.0-229.11.1.el7.x86_64 /usr/src/kernels/3.10.0-229.el7.x86_64
+	ln -s 3.10.0-327.18.2.el7.x86_64/ /usr/src/kernels/3.10.0-327.18.2.el7.x86_64/
 
 ### SELinux
 
