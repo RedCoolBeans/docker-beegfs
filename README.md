@@ -71,8 +71,8 @@ fact it's using the external kernel module. The container is only included for
 demonstration purposes and not started by default.
 
 If you want to write to a BeeGFS cluster from within a Docker container you should
-use the [docker-volume-beegfs](https://github.com/RedCoolBeans/docker-volume-beegfs)
-plugin instead. It exposes a Docker native volume to your containers.
+use the [docker-volume-beegfs](https://github.com/RedCoolBeans/docker-volume-beegfs) plugin instead.
+It exposes a Docker native volume to your containers.
 
 ## Environment variables
 
@@ -87,8 +87,7 @@ plugin instead. It exposes a Docker native volume to your containers.
 
 These images are provided free of charge by RedCoolBeans. Various security measures
 have not been implemented or added in these images.
-For supported and security hardened images with BeeGFS, please
-[contact us](http://www.redcoolbeans.com/contact/).
+For supported and security hardened images with BeeGFS, please [contact us](http://www.redcoolbeans.com/contact/).
 
 ## Copyright and license
 
