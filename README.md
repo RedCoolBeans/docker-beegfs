@@ -1,5 +1,7 @@
 # BeeGFS on Docker
 
+[BeeGFS](http://www.beegfs.com/content/) is the leading parallel cluster file system, developed with a strong focus on performance and designed for very easy installation and management.
+
 ## Host setup
 
 ### Kernel module
