@@ -25,7 +25,7 @@ In order for BeeGFS to function properly SELinux needs to be disabled on the hos
 
 ## Build containers
 
-You can skip this if you're using the images from the Docker Hub.
+You can skip building the images if you're using the images from the Docker Hub:
 
 	docker-compose -f docker-compose.dev.yml build
 
