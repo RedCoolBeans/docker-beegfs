@@ -83,7 +83,7 @@ variables can be used, along with their range:
 
 These images are provided free of charge by RedCoolBeans. Various security measures
 have not been implemented or added in these images.
-For supported and security hardened images with Bacula Enterprise, please
+For supported and security hardened images with BeeGFS, please
 [contact us](http://www.redcoolbeans.com/contact/).
 
 ## Copyright and license
