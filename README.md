@@ -1,4 +1,4 @@
-# BeeGFS
+# BeeGFS on Docker
 
 ## Host setup
 
@@ -25,7 +25,9 @@ In order for BeeGFS to function properly SELinux needs to be disabled on the hos
 
 ## Build containers
 
-	docker-compose build
+You can skip this if you're using the images from the Docker Hub.
+
+	docker-compose -f docker-compose.dev.yml build
 
 ## Run containers
 

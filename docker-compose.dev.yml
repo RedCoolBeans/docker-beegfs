@@ -2,7 +2,7 @@ version: "2"
 
 services:
   management:
-    image: redcoolbeans/beegfs-management
+    build: management
     hostname: node01
     networks:
       beegfs:
@@ -16,7 +16,7 @@ services:
       BEEBGFS_LOGLEVEL: 3
   
   metadata:
-    image: redcoolbeans/beegfs-metadata
+    build: metadata
     hostname: node02
     networks:
       beegfs:
@@ -33,7 +33,7 @@ services:
       - management
   
   storage:
-    image: redcoolbeans/beegfs-storage
+    build: storage
     hostname: node03
     networks:
       beegfs:
