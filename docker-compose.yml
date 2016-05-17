@@ -2,7 +2,7 @@ version: "2"
 
 services:
   management:
-    build: mgmt
+    build: management
     hostname: node01
     networks:
       beegfs:
