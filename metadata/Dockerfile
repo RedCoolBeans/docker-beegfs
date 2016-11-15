@@ -3,7 +3,7 @@ FROM centos:7
 
 LABEL beegfs_component="metadata"
 
-ENV BEEGFS_VERSION=2015.03 \
+ENV BEEGFS_VERSION=6 \
     METADATA_SERVICE_ID=2
 
 RUN yum -q -y update
