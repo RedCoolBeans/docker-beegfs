@@ -3,7 +3,7 @@ FROM centos:7
 
 LABEL beegfs_component="storage"
 
-ENV BEEGFS_VERSION=2015.03 \
+ENV BEEGFS_VERSION=6 \
     STORAGE_SERVICE_ID="3" \
     STORAGE_TARGET_ID="301" \
     STORAGE_LOCATION="/data"
