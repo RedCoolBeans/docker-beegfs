@@ -14,7 +14,7 @@ If it hasn't been built either copy `./beegfs.ko` into `/lib/modules/3.10.0-327.
 if the kernel version matches (built on CentOS 7.2.1511).
 Otherwise install `beegfs-client`, then:
 
-	cd /opt/beegfs/src/client/beegfs_client_module_2015.03/build
+	cd /opt/beegfs/src/client/beegfs_client_module_XXX/build
 	make beegfs
 
 Path to kernel headers may be incorrect; to fix it up:
