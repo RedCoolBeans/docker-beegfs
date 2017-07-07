@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: beegfs-storage
+  labels:
+    name: beegfs-storage
+spec:
+  containers:
+    - image: redcoolbeans/beegfs-storage
+      name: node03
+      env:
+        - name: STORAGE_SERVICE_ID
+          value: "3"
+        - name: STORAGE_TARGET_ID
+          value: "301"
+      ports:
+        - containerPort: 8003
+          protocol: TCP
+        - containerPort: 8003
+          protocol: UDP
+      volumeMounts:
+        - name: beegfs-storage
+          mountPath: /data
+  volumes:
+    - name: beegfs-storage
+      emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: node03
+  name: node03
+spec:
+  ports:
+  - protocol: TCP
+    name: node01-tcp
+    port: 8003
+    targetPort: 8003
+  - protocol: UDP
+    name: node01-udp
+    port: 8003
+    targetPort: 8003
+  selector:
+    name: beegfs-storage
+#  externalIPs:
+#  - $EXT_IP1
